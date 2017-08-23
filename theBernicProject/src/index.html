@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app="YlcApp">
+
+<head>
+    <!-- Title -->
+    <title>{{title}}</title>
+
+    <!-- CSS FILES -->
+
+    <!-- Bootstrap-3.3.7 -->
+    <link href="../vendor/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font-awesome -->
+    <link href="../vendor/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <!-- Angular-Ui Bootstrap -->
+    <link href="../vendor/angular-ui/ui-bootstrap-csp.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <!-- Index -->
+    <link href="./app/index.css" rel="stylesheet">
+    <!-- Home -->
+    <link href="./home/home.css" rel="stylesheet">
+    <!-- Experience Details -->
+    <link href="./experienceDetails/experienceDetails.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- theBernic Logo -->
+    <div ng-controller="LogoCtrl" class="theBernicLogo">
+        <!-- {{logo}} =>  -->
+        <div class="container">{{logo}}</div>
+    </div>
+    <!-- theBernic Logo ends -->
+
+    <!-- Navigation Bar -->
+    <div ng-controller="NavBarCtrl">
+        <nav class="navbar navbar-default navPosition" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="container">
+                <div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="#!/home">Home</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navigation Bar ends -->
+
+    <!-- Workspace -->
+    <section class="container-fluid" ng-controller="ExperienceCardCtrl">
+        <!--Views-->
+        <div ng-view></div>
+
+    </section>
+    <!-- Workspace Ends -->
+
+    <!--Footer-->
+    <footer class="foot">
+        <div class="container">
+            <br>
+            <h2 class="text-center">Your Local Cousin</h2>
+        </div>
+    </footer>
+    <!--Footer Ends-->
+
+</body>
+
+<!-- JAVASCRIPT SCRIPTS -->
+
+<!-- ANGULAR-1.6.4 -->
+<!-- Angular -->
+<script src="../vendor/angular-1.6.4/angular.min.js" type="text/javascript"></script>
+<!-- Angular-route -->
+<script src="../vendor/angular-1.6.4/angular-route.min.js" type="text/javascript"></script>
+<!-- ANGULAR-UI -->
+<script src="../vendor/angular-ui/ui-bootstrap-tpls.js" type="text/javascript"></script>
+<!-- App -->
+<script src="./app/app.js" type="text/javascript"></script>
+<!-- Home -->
+<script src="./home/home.js" type="text/javascript"></script>
+<!-- Experience Details -->
+<script src="./experienceDetails/experienceDetails.js" type="text/javascript"></script>
+
+</html>

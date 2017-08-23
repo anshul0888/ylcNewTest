@@ -1,0 +1,43 @@
+body{
+    overflow-y: auto;
+    background-color: rgba(243,244,246,1);
+}
+/* theBernic Logo */
+.theBernicLogo{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 60px;
+    background-color: rgba(1,38,56,1);
+    color: rgba(255,255,255,1);
+    font-size: 40px;
+    font-family: "HelveticaNeue",sans-serif;
+}
+
+/* Navigation Bar */
+.navbar-collapse.in {
+    overflow-y: hidden;
+  }
+.navPosition{
+    margin-top: 60px;
+}
+
+/*Footer*/
+.foot{
+    margin-top: 20px;
+    background-color: rgba(1,38,56,1);
+    color: rgba(255,255,255,1);
+    position: relative;
+    bottom:0;
+    left:0;
+    width:100%;
+    min-height:200px;
+}
+section{
+    overflow-y: auto;
+}
+hr{
+    border:1px solid rgba(155,155,155,1);
+}

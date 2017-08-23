@@ -1,0 +1,206 @@
+<div class="container-fluid" ng-controller="ExperienceDataCtrl">
+
+        <div ng-controller="CarouselDemoCtrl">
+            <div style="height: 305px">
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                    <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                        <img ng-src="{{slide.image[$index]}}" style="margin:auto;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    <div class="row" style="margin-top: 205px;">
+        <!--Left Form-->
+        <div class="col-sm-8">
+            <div class="container-fluid">
+                <!--City Name-->
+                <div class="row">
+                    <h2>{{expData.cityName}}, <strong>{{expData.countryName}}</strong></h2>
+                    <!--City Description-->
+                    <p>{{expData.cityDescription}}</p>
+                </div>
+                <!--City tour details-->
+                <div class="row">
+                    <div class="col-sm-4"><p><i class="fa fa-hourglass" aria-hidden="true"></i> {{expData.tourDetails.timeInterval}}</p></div>
+                    <div class="col-sm-4"><p><i class="fa fa-weixin" aria-hidden="true"></i> {{expData.tourDetails.language}}</p></div>
+                    <div class="col-sm-4"><p><i class="fa fa-clock-o" aria-hidden="true"></i> {{expData.tourDetails.timeDetails}}</p></div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+                <!--About Experience-->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4>About your experience</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-justify">
+                            {{expData.aboutExperience}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+                <!--What's included-->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4>What's included</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <ul>
+                            <li ng-repeat="includedItems in expData.whatIncluded">{{includedItems}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+                <!--What's excluded-->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4>What's excluded</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <ul>
+                            <li ng-repeat="excludedItems in expData.whatExcluded">{{excludedItems}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+                <!--Transportation-->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4>Transportation</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <p>{{expData.transportation}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+                <!--Group Size-->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4>Group Size</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <p>{{expData.groupSize}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+                <!--Cancellation Policy-->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4>Cancellation Policy</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <p>{{expData.cancellationPolicy}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+                <!--Category-->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4>Category</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="backTileDiv" ng-repeat="categoryItems in expData.category">{{categoryItems}}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+                <!--Good for-->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h4>Good for</h4>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="backTileDiv" ng-repeat="goodItems in expData.goodFor">{{goodItems}}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!--Right Form-->
+        <div class="col-sm-4" style="background-color: rgba(255,255,255,1);">
+            <div class="container-fluid">
+                <br>
+                <!--Cost-->
+                <div class="row">
+                    <div class="col-sm-5">
+                        Starts At<br>
+                        US $50<br>
+                        per person
+                    </div>
+                    <div class="col-sm-7">
+                        <button class="btn btn-warning btn-lg" type="button">Check Availability</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+                <!--About our host-->
+                <div class="row container-fluid">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h4>About our host</h4>
+                        </div>
+                        <div class="col-sm-4">Pic</div>
+                    </div>
+                    <div class="row">
+                        <p>{{expData.aboutHost}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                </div>
+
+                <!--Credentials-->
+                <div class="row container-fluid">
+                    <div class="row">
+                        <h4>Credentials</h4>
+                    </div>
+                    <div class="row">
+                        <p>{{expData.credentials}}</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

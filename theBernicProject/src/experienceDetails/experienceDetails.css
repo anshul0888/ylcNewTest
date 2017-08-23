@@ -1,0 +1,7 @@
+.backTileDiv{
+    display: inline-block;
+    padding:6px 12px;
+    margin: 8px;
+    background-color: rgba(155,155,155,0.4);
+    border-radius: 20px;
+}
