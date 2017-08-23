@@ -164,7 +164,7 @@
                         per person
                     </div>
                     <div class="col-sm-7">
-                        <button class="btn btn-warning btn-lg" type="button">Check Availability</button>
+                        <button class="btn btn-warning btn-lg" type="button" data-toggle="modal" data-target="#checkAvailabilityModal">Check Availability</button>
                     </div>
                 </div>
                 <div class="row">
@@ -202,5 +202,31 @@
 
         </div>
     </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="checkAvailabilityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal Ends-->
+
+
+
 
 </div>
