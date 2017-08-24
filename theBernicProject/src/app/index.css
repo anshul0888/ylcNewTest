@@ -14,6 +14,7 @@ body{
     color: rgba(255,255,255,1);
     font-size: 40px;
     font-family: "HelveticaNeue",sans-serif;
+    z-index: 10;
 }
 
 /* Navigation Bar */
@@ -22,6 +23,19 @@ body{
   }
 .navPosition{
     margin-top: 60px;
+}
+.ylcLogo{
+    height:57px;
+    width:57px;
+}
+.navbar{
+    height:60px;
+}
+.navbar-nav{
+    font-size: large;
+}
+.leftUl{
+    margin-top: 0px;
 }
 
 /*Footer*/
