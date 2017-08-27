@@ -15,11 +15,19 @@ body{
     font-size: 40px;
     font-family: "HelveticaNeue",sans-serif;
     z-index: 10;
+    padding:2px 0px;
+}
+.logoDisplay{
+    height:56px;
+    min-width:250px;
+    width:15%;
+    /*background-color: white;*/
 }
 
 /* Navigation Bar */
 .navbar-collapse.in {
     overflow-y: hidden;
+    background-color: rgba(255,255,255,1);
   }
 .navPosition{
     margin-top: 60px;
@@ -30,6 +38,7 @@ body{
 }
 .navbar{
     height:60px;
+    z-index: 10;
 }
 .navbar-nav{
     font-size: large;

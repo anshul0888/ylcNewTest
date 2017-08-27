@@ -5,3 +5,7 @@
     background-color: rgba(155,155,155,0.4);
     border-radius: 20px;
 }
+.hostImage{
+    height: 80px;
+    width: 80px;
+}

@@ -3,6 +3,9 @@ const expApp = angular.module("ExperienceApp",[]);
 expApp.controller("ExperienceDataCtrl",function($scope, $rootScope){
     $scope.expData = $rootScope.clickCardData;
 });
+
+
+//Experience Carousel Controller
 expApp.controller('CarouselDemoCtrl', function ($scope) {
     $scope.myInterval = 1000;
     $scope.noWrapSlides = false;

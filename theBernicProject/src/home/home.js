@@ -1,4 +1,4 @@
-const homeApp = angular.module('HomeApp',[]);
+var homeApp = angular.module('HomeApp',[]);
 
 // Experience Card Controller
 homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
@@ -43,6 +43,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },
@@ -85,6 +86,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },
@@ -127,6 +129,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },
@@ -169,6 +172,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },
@@ -211,6 +215,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },
@@ -253,6 +258,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },
@@ -295,6 +301,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },{
@@ -336,6 +343,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },
@@ -378,6 +386,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },
@@ -420,6 +429,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         },
@@ -462,6 +472,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Group of friends",
                 "Solo travelers"
             ],
+            hostImg: "https://www.filepicker.io/api/file/RNz8jv93SV6j0fC0QY5Y",
             aboutHost:"Hello! My name is Thanh. I graduated from Ha Noi University of Science in January 2015. I speak English fluently and it is during my time at the University that my",
             credentials:"Undergraduate degree in Environmental Science"
         }

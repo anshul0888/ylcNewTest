@@ -1,4 +1,4 @@
-const app = angular.module('YlcApp',['ui.bootstrap','ngRoute','HomeApp','ExperienceApp']);
+var app = angular.module('YlcApp',['ui.bootstrap','ngRoute','HomeApp','ExperienceApp']);
 
 //Routing Configurations
 app.config(function($routeProvider){
@@ -15,14 +15,29 @@ app.config(function($routeProvider){
 });
 
 // Logo Controller
-app.controller("LogoCtrl",function($scope,$rootScope){
+app.controller("LogoCtrl",function($scope,$rootScope, $q, $http){
     //Logo Variable
-    $scope.logo = "theBernic";
+
     // Page Title Variable
     $rootScope.title = "Your Local Cousin";
-})
+
+    $scope.testFun = function(){
+        $http({
+            url : "http://localhost:3030/api/exp/users",
+            method : "GET"
+        }).then(function(response){
+            console.log(response);
+            $scope.logo = response.data.lg;
+        },function(response){
+            console.log("fail");
+        });
+    };
+    $scope.testFun();
+
+});
 
 // Navigation Bar Controller
 app.controller("NavBarCtrl",function($scope){
     $scope.isNavCollapsed = true;
 });
+
