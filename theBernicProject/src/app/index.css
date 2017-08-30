@@ -1,6 +1,7 @@
 body{
     overflow-y: auto;
     background-color: rgba(243,244,246,1);
+    font-family: "Roboto", sans-serif;
 }
 /* theBernic Logo */
 .theBernicLogo{
@@ -19,7 +20,7 @@ body{
 }
 .logoDisplay{
     height:56px;
-    min-width:250px;
+    min-width:200px;
     width:15%;
     /*background-color: white;*/
 }
@@ -62,5 +63,9 @@ section{
     overflow-y: auto;
 }
 hr{
-    border:1px solid rgba(155,155,155,1);
+    border:1px solid rgba(212,213,215,1);
+}
+
+label{
+    font-size: 16px !important;
 }

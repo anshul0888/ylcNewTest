@@ -1,10 +1,12 @@
-<div class="container-fluid" ng-controller="ExperienceDataCtrl">
+<div class="container" ng-controller="ExperienceDataCtrl">
 
         <div ng-controller="CarouselDemoCtrl">
-            <div style="height: 305px">
+            <div style="height: 305px; width: 100%;">
                 <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" style="min-height: 500px;">
                     <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                        <img ng-src="{{slide.image[$index]}}" style="margin:auto;">
+                        <div style="background-size:cover;">
+                            <img ng-src="{{slide.image[$index]}}" style="margin:auto;">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -18,21 +20,21 @@
 
 
 
-    <div class="row" style="margin-top: 205px;">
+    <div class="row container-fluid" style="margin-top: 205px;">
         <!--Left Form-->
         <div class="col-sm-8">
             <div class="container-fluid">
                 <!--City Name-->
                 <div class="row">
-                    <h2>{{expData.cityName}}, <strong>{{expData.countryName}}</strong></h2>
+                    <h2><span style="font-weight: 100;">{{expData.cityName}},</span> <strong>{{expData.countryName}}</strong></h2>
                     <!--City Description-->
                     <p>{{expData.cityDescription}}</p>
                 </div>
                 <!--City tour details-->
                 <div class="row">
-                    <div class="col-sm-4"><p><i class="fa fa-hourglass" aria-hidden="true"></i> {{expData.tourDetails.timeInterval}}</p></div>
-                    <div class="col-sm-4"><p><i class="fa fa-weixin" aria-hidden="true"></i> {{expData.tourDetails.language}}</p></div>
-                    <div class="col-sm-4"><p><i class="fa fa-clock-o" aria-hidden="true"></i> {{expData.tourDetails.timeDetails}}</p></div>
+                    <div class="col-sm-3"><i class="fa fa-hourglass" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.timeInterval}}</span></div>
+                    <div class="col-sm-4"><i class="fa fa-weixin" style="color: teal; font-size: 20px; aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.language}}</span></div>
+                    <div class="col-sm-5"><i class="fa fa-clock-o" style="color: teal; font-size: 20px; aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.timeDetails}}</span></div>
                 </div>
                 <div class="row">
                     <hr>
@@ -41,7 +43,7 @@
                 <!--About Experience-->
                 <div class="row">
                     <div class="col-sm-3">
-                        <h4>About your experience</h4>
+                        <h5>About your experience</h5>
                     </div>
                     <div class="col-sm-9">
                         <p class="text-justify">
@@ -55,10 +57,10 @@
                 <!--What's included-->
                 <div class="row">
                     <div class="col-sm-3">
-                        <h4>What's included</h4>
+                        <h5>What's included</h5>
                     </div>
                     <div class="col-sm-9">
-                        <ul>
+                        <ul style="padding: 15px">
                             <li ng-repeat="includedItems in expData.whatIncluded">{{includedItems}}</li>
                         </ul>
                     </div>
@@ -70,10 +72,10 @@
                 <!--What's excluded-->
                 <div class="row">
                     <div class="col-sm-3">
-                        <h4>What's excluded</h4>
+                        <h5>What's excluded</h5>
                     </div>
                     <div class="col-sm-9">
-                        <ul>
+                        <ul style="padding: 15px">
                             <li ng-repeat="excludedItems in expData.whatExcluded">{{excludedItems}}</li>
                         </ul>
                     </div>
@@ -85,7 +87,7 @@
                 <!--Transportation-->
                 <div class="row">
                     <div class="col-sm-3">
-                        <h4>Transportation</h4>
+                        <h5>Transportation</h5>
                     </div>
                     <div class="col-sm-9">
                         <p>{{expData.transportation}}</p>
@@ -98,7 +100,7 @@
                 <!--Group Size-->
                 <div class="row">
                     <div class="col-sm-3">
-                        <h4>Group Size</h4>
+                        <h5>Group Size</h5>
                     </div>
                     <div class="col-sm-9">
                         <p>{{expData.groupSize}}</p>
@@ -111,7 +113,7 @@
                 <!--Cancellation Policy-->
                 <div class="row">
                     <div class="col-sm-3">
-                        <h4>Cancellation Policy</h4>
+                        <h5>Cancellation Policy</h5>
                     </div>
                     <div class="col-sm-9">
                         <p>{{expData.cancellationPolicy}}</p>
@@ -124,7 +126,7 @@
                 <!--Category-->
                 <div class="row">
                     <div class="col-sm-3">
-                        <h4>Category</h4>
+                        <h5>Category</h5>
                     </div>
                     <div class="col-sm-9">
                         <div class="backTileDiv" ng-repeat="categoryItems in expData.category">{{categoryItems}}</div>
@@ -137,7 +139,7 @@
                 <!--Good for-->
                 <div class="row">
                     <div class="col-sm-3">
-                        <h4>Good for</h4>
+                        <h5>Good for</h5>
                     </div>
                     <div class="col-sm-9">
                         <div class="backTileDiv" ng-repeat="goodItems in expData.goodFor">{{goodItems}}</div>
@@ -181,7 +183,7 @@
                             <img class="img-circle hostImage" src={{expData.hostImg}}>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row container-fluid">
                         <p>{{expData.aboutHost}}</p>
                     </div>
                 </div>
@@ -191,10 +193,10 @@
 
                 <!--Credentials-->
                 <div class="row container-fluid">
-                    <div class="row">
+                    <div class="row container-fluid">
                         <h4>Credentials</h4>
                     </div>
-                    <div class="row">
+                    <div class="row container-fluid">
                         <p>{{expData.credentials}}</p>
                     </div>
                 </div>

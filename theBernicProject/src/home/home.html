@@ -18,18 +18,21 @@
 <!--Category Ends-->
 
 <br>
-<!-- Experience Card -->
-<div class="row" ng-repeat="cardData in experienceCardData" ng-if="$index % 4 == 0">
-    <div class="col-sm-3" ng-repeat="cardData in experienceCardData.slice($index, ($index+4 > experienceCardData.length ? experienceCardData.length : $index+4))">
-        <a ng-click="cardClick(cardData)">
-            <div class="experienceCard" >
-                <img class="experienceCardImg img-responsive" src={{cardData.url}} alt="image.jpg">
-                <div class="experienceCardText container-fluid">
-                    <p class="experienceCardTextParagraph">{{cardData.cityDescription}}</p>
+<div ng-controller="ExperienceCardCtrl" class="container">
+    <!-- Experience Card -->
+    <div class="row" ng-repeat="cardData in experienceCardData" ng-if="$index % 3 == 0">
+        <div class="col-sm-4" ng-repeat="cardData in experienceCardData.slice($index, ($index+3 > experienceCardData.length ? experienceCardData.length : $index+3))">
+            <a ng-click="cardClick(cardData)">
+                <div class="experienceCard" >
+                    <img class="experienceCardImg img-responsive" src={{cardData.url}} alt="image.jpg">
+                    <div class="experienceCardText container-fluid">
+                        <p class="experienceCardTextParagraph">{{cardData.cityDescription}}</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
+    <!--Experience Card Ends-->
 </div>
-<!--Experience Card Ends-->
+
 <br>
