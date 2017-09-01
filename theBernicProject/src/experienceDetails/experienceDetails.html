@@ -1,7 +1,7 @@
 <div class="container" ng-controller="ExperienceDataCtrl">
 
         <div ng-controller="CarouselDemoCtrl">
-            <div style="height: 305px; width: 100%;">
+            <div style="height: 500px; width: 1170px;">
                 <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" style="min-height: 500px;">
                     <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
                         <div style="background-size:cover;">
@@ -20,7 +20,7 @@
 
 
 
-    <div class="row container-fluid" style="margin-top: 205px;">
+    <div class="row" style="padding-left: 15px; width: 1185px;">
         <!--Left Form-->
         <div class="col-sm-8">
             <div class="container-fluid">
@@ -161,12 +161,12 @@
                 <!--Cost-->
                 <div class="row">
                     <div class="col-sm-5">
-                        Starts At<br>
-                        US $50<br>
-                        per person
+                        <span style="border-bottom: 1px solid rgba(0,0,0,1);font-size: 14px;">Starts At</span><br>
+                        <strong style="font-size: 18px;">US $50</strong><br>
+                        <span style="font-size: 14px;">per person</span>
                     </div>
                     <div class="col-sm-7">
-                        <button class="btn btn-warning btn-lg" type="button" data-toggle="modal" data-target="#checkAvailabilityModal">Check Availability</button>
+                        <button class="btn btn-success btn-lg" type="button" data-toggle="modal" data-target="#checkAvailabilityModal">Check Availability</button>
                     </div>
                 </div>
                 <div class="row">
@@ -178,6 +178,8 @@
                     <div class="row">
                         <div class="col-sm-8">
                             <h4>About our host</h4>
+                            <br>
+                            <div class="stripe-3"></div>
                         </div>
                         <div class="col-sm-4">
                             <img class="img-circle hostImage" src={{expData.hostImg}}>
@@ -195,6 +197,8 @@
                 <div class="row container-fluid">
                     <div class="row container-fluid">
                         <h4>Credentials</h4>
+                        <br>
+                        <div class="stripe-3"></div>
                     </div>
                     <div class="row container-fluid">
                         <p>{{expData.credentials}}</p>

@@ -23,9 +23,9 @@
     <div class="row" ng-repeat="cardData in experienceCardData" ng-if="$index % 3 == 0">
         <div class="col-sm-4" ng-repeat="cardData in experienceCardData.slice($index, ($index+3 > experienceCardData.length ? experienceCardData.length : $index+3))">
             <a ng-click="cardClick(cardData)">
-                <div class="experienceCard" >
+                <div class="thumbnail experienceCard" >
                     <img class="experienceCardImg img-responsive" src={{cardData.url}} alt="image.jpg">
-                    <div class="experienceCardText container-fluid">
+                    <div class="experienceCardText">
                         <p class="experienceCardTextParagraph">{{cardData.cityDescription}}</p>
                     </div>
                 </div>

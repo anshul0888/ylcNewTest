@@ -24,7 +24,4 @@ expApp.controller('CarouselDemoCtrl', function ($scope) {
     for (var i = 0; i < 4; i++) {
         $scope.addSlide();
     }
-
-
-
 });

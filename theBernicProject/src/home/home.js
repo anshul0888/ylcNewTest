@@ -6,7 +6,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
     $scope.experienceCardData = [
         {
             url: "https://www.filepicker.io/api/file/XjXg5l5VThaaELADqKAw",
-            cityDescription: "City 1",
+            cityDescription: "Ancient Knife-making Workshop and Vietnamese Cooking Classes",
             cityName: "Hanoi center",
             countryName: "Vietnam",
             tourDetails: {
