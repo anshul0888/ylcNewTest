@@ -49,7 +49,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/rHKIXoCFT7CHiiRZMHc3",
-            cityDescription: "City 2",
+            cityDescription: "Vegetarian and vegan delicacies with an impassioned local foodie",
             cityName: "Hanoi center",
             countryName: "Vietnam",
             tourDetails: {
