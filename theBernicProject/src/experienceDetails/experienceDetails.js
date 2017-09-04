@@ -7,7 +7,7 @@ expApp.controller("ExperienceDataCtrl",function($scope, $rootScope){
 
 //Experience Carousel Controller
 expApp.controller('CarouselDemoCtrl', function ($scope) {
-    $scope.myInterval = 1000;
+    $scope.myInterval = 3000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
     var slides = $scope.slides = [];

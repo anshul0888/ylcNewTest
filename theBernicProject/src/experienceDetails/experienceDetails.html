@@ -1,11 +1,11 @@
 <div class="container" ng-controller="ExperienceDataCtrl">
 
-        <div ng-controller="CarouselDemoCtrl">
-            <div style="height: 500px; width: 1170px;">
+        <div class="row" ng-controller="CarouselDemoCtrl">
+            <div style="height: 500px; max-width: 1170px;">
                 <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" style="min-height: 500px;">
                     <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
                         <div style="background-size:cover;">
-                            <img ng-src="{{slide.image[$index]}}" style="margin:auto;width: 1170px;max-height: 500px;">
+                            <img class="img-responsive" ng-src="{{slide.image[$index]}}" style="margin:auto;width: 1170px;height: 500px;">
                         </div>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
 
 
 
-    <div class="row" style="padding-left: 15px; width: 1185px;">
+    <div class="row" style="padding-left: 15px; max-width: 1185px;">
         <!--Left Form-->
         <div class="col-sm-8">
             <div class="container-fluid">
@@ -33,8 +33,8 @@
                 <!--City tour details-->
                 <div class="row">
                     <div class="col-sm-3"><i class="fa fa-hourglass" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.timeInterval}}</span></div>
-                    <div class="col-sm-4"><i class="fa fa-weixin" style="color: teal; font-size: 20px; aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.language}}</span></div>
-                    <div class="col-sm-5"><i class="fa fa-clock-o" style="color: teal; font-size: 20px; aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.timeDetails}}</span></div>
+                    <div class="col-sm-4"><i class="fa fa-weixin" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.language}}</span></div>
+                    <div class="col-sm-5"><i class="fa fa-clock-o" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.timeDetails}}</span></div>
                 </div>
                 <div class="row container-fluid">
                     <hr>
