@@ -39,6 +39,7 @@ app.controller("LogoCtrl",function($scope,$rootScope, $q, $http){
 // Navigation Bar Controller
 app.controller("NavBarCtrl",function($scope){
     $scope.isNavCollapsed = true;
+    $scope.ylcLogo = './images/ylcLogo.png';
 });
 
 app.controller("RefreshCtrl",function ($location) {
