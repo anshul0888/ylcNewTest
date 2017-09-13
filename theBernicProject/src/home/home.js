@@ -6,6 +6,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
     $scope.experienceCardData = [
         {
             url: "https://www.filepicker.io/api/file/XjXg5l5VThaaELADqKAw",
+            experienceId:"Here should be id",
             cityDescription: "Ancient Knife-making Workshop and Vietnamese Cooking Classes",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -49,6 +50,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/rHKIXoCFT7CHiiRZMHc3",
+            experienceId:"Here should be id",
             cityDescription: "Vegetarian and vegan delicacies with an impassioned local foodie",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -74,9 +76,6 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             cancellationPolicy: "If cancelled 3 days before the class, then 25% charged, 2 days before the class then 30% charged and if canceled on date of class then 100% charged and no refund is given.",
             category: [
                 "Family friendly",
-                "Cooking",
-                "Food",
-                "Shopping",
                 "Traditional"
             ],
             goodFor: [
@@ -92,6 +91,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/ypHLqUlVSYedDqN8Me9C",
+            experienceId:"Here should be id",
             cityDescription: "City 3",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -118,9 +118,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             category: [
                 "Family friendly",
                 "Cooking",
-                "Food",
-                "Shopping",
-                "Traditional"
+                "Food"
             ],
             goodFor: [
                 "Families",
@@ -135,6 +133,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "./images/Brooklyn.png",
+            experienceId:"Here should be id",
             cityDescription: "City 4",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -159,10 +158,6 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             groupSize: "Maximum up to 4 people, 50$ for a single class, 75$ for 2 people and 96$ for 3 people.",
             cancellationPolicy: "If cancelled 3 days before the class, then 25% charged, 2 days before the class then 30% charged and if canceled on date of class then 100% charged and no refund is given.",
             category: [
-                "Family friendly",
-                "Cooking",
-                "Food",
-                "Shopping",
                 "Traditional"
             ],
             goodFor: [
@@ -178,6 +173,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "./images/mexico.png",
+            experienceId:"Here should be id",
             cityDescription: "City 5",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -202,7 +198,6 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             groupSize: "Maximum up to 4 people, 50$ for a single class, 75$ for 2 people and 96$ for 3 people.",
             cancellationPolicy: "If cancelled 3 days before the class, then 25% charged, 2 days before the class then 30% charged and if canceled on date of class then 100% charged and no refund is given.",
             category: [
-                "Family friendly",
                 "Cooking",
                 "Food",
                 "Shopping",
@@ -221,6 +216,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/XjXg5l5VThaaELADqKAw",
+            experienceId:"Here should be id",
             cityDescription: "City 6",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -245,9 +241,6 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             groupSize: "Maximum up to 4 people, 50$ for a single class, 75$ for 2 people and 96$ for 3 people.",
             cancellationPolicy: "If cancelled 3 days before the class, then 25% charged, 2 days before the class then 30% charged and if canceled on date of class then 100% charged and no refund is given.",
             category: [
-                "Family friendly",
-                "Cooking",
-                "Food",
                 "Shopping",
                 "Traditional"
             ],
@@ -264,6 +257,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/rHKIXoCFT7CHiiRZMHc3",
+            experienceId:"Here should be id",
             cityDescription: "City 7",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -292,7 +286,8 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Cooking",
                 "Food",
                 "Shopping",
-                "Traditional"
+                "Traditional",
+                "Anshul"
             ],
             goodFor: [
                 "Families",
@@ -306,6 +301,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             credentials:"Undergraduate degree in Environmental Science"
         },{
             url: "https://www.filepicker.io/api/file/ypHLqUlVSYedDqN8Me9C",
+            experienceId:"Here should be id",
             cityDescription: "City 8",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -349,6 +345,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "./images/Brooklyn.png",
+            experienceId:"Here should be id",
             cityDescription: "City 9",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -377,7 +374,8 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Cooking",
                 "Food",
                 "Shopping",
-                "Traditional"
+                "Traditional",
+                "Testing"
             ],
             goodFor: [
                 "Families",
@@ -392,6 +390,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "./images/mexico.png",
+            experienceId:"Here should be id",
             cityDescription: "City 10",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -435,6 +434,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/XjXg5l5VThaaELADqKAw",
+            experienceId:"Here should be id",
             cityDescription: "City 11",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -459,11 +459,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             groupSize: "Maximum up to 4 people, 50$ for a single class, 75$ for 2 people and 96$ for 3 people.",
             cancellationPolicy: "If cancelled 3 days before the class, then 25% charged, 2 days before the class then 30% charged and if canceled on date of class then 100% charged and no refund is given.",
             category: [
-                "Family friendly",
-                "Cooking",
-                "Food",
-                "Shopping",
-                "Traditional"
+                "Testing"
             ],
             goodFor: [
                 "Families",
@@ -491,6 +487,20 @@ homeApp.controller("CategoryCtrl",function ($scope) {
         isopen: false
     };
     //Category Menu
-    $scope.categoryMenu = ["Food Tour","Popular NYC Attractions","Walking Tour"];
+    $scope.categoryMenu = ["Family friendly",
+        "Cooking",
+        "Food",
+        "Shopping",
+        "Traditional",
+        "Anshul",
+    "Testing"];
 
-})
+});
+homeApp.controller("CategorySearchCtrl",function($scope){
+    $scope.dropboxitemselected=function(categoryItems){
+        $scope.categoryFilter= categoryItems;
+    }
+    $scope.removeFilter=function(){
+        $scope.categoryFilter="";
+    }
+});

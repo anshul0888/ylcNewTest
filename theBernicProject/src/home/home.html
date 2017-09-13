@@ -1,38 +1,46 @@
-<!--Category Filter-->
-<div class="row" ng-controller="CategoryCtrl">
-    <div class="form-inline form-group">
-        <label class="col-sm-1 col-sm-offset-4 control-label" style="text-align: right;">Filter by</label>
-        <div class="col-sm-2">
-            <!--DropDown for Category-->
-            <div uib-dropdown is-open="categoryStatus.isopen">
-                <button id="single-button" type="button" class="btn btn-primary btn-block" uib-dropdown-toggle ng-disabled="disabled">
-                    Category
-                </button>
-                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                    <li role="menuitem" ng-repeat="categoryItems in categoryMenu"><a href="#">{{categoryItems}}</a></li>
-                </ul>
+<div ng-controller="CategorySearchCtrl">
+    <!--Category Filter-->
+    <div class="row" ng-controller="CategoryCtrl">
+        <div class="form-inline form-group">
+            <label class="col-sm-1 col-sm-offset-3 control-label" style="text-align: right;">Filter by</label>
+            <div class="col-sm-2" >
+                <!--DropDown for Category-->
+                <div uib-dropdown is-open="categoryStatus.isopen">
+                    <button class="btn btn-primary btn-block dropdown-toggle" ng-model="categoryFi" type="button" id="categoryFilterButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Category
+                        <span class="caret"></span>
+                    </button>
+                    {{categoryFilter}}
+                    <ul class="dropdown-menu"  uib-dropdown-menu role="menu" aria-labelledby="categoryFilterButton">
+                        <li role="menuitem" ng-repeat="categoryItems in categoryMenu"><a ng-click="dropboxitemselected(categoryItems)">{{categoryItems}}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-danger btn-block" ng-click="removeFilter();"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Clear Filter</button>
             </div>
         </div>
     </div>
-</div>
-<!--Category Ends-->
+    <!--Category Ends-->
 
-<br>
-<div ng-controller="ExperienceCardCtrl" class="container">
-    <!-- Experience Card -->
-    <div class="row" ng-repeat="cardData in experienceCardData" ng-if="$index % 3 == 0">
-        <div class="col-sm-4" ng-repeat="cardData in experienceCardData.slice($index, ($index+3 > experienceCardData.length ? experienceCardData.length : $index+3))">
-            <a ng-click="cardClick(cardData)">
-                <div class="thumbnail experienceCard" >
-                    <img class="experienceCardImg img-responsive" src={{cardData.url}} alt="image.jpg">
-                    <div class="experienceCardText">
-                        <h4 class="experienceCardTextParagraph">{{cardData.cityDescription}}</h4>
+    <br>
+    <div ng-controller="ExperienceCardCtrl" class="container">
+        <!-- Experience Card -->
+        <!--<div class="row" ng-repeat="cardData in experienceCardData" ng-if="$index % 3 == 0">-->
+            <div class="col-sm-4" ng-repeat="cardData in experienceCardData | filter:{category: categoryFilter}">
+                <!--Include ".slice($index, ($index+3 > experienceCardData.length ? experienceCardData.length : $index+3))" after "experienceCardData in ng-repeat" just in case-->
+                <a ng-click="cardClick(cardData)">
+                    <div class="thumbnail experienceCard" >
+                        <img class="experienceCardImg img-responsive" src={{cardData.url}} alt="image.jpg">
+                        <div class="experienceCardText">
+                            <h4 class="experienceCardTextParagraph">{{cardData.cityDescription}}</h4>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        <!--</div>-->
+        <!--Experience Card Ends-->
     </div>
-    <!--Experience Card Ends-->
-</div>
 
-<br>
+    <br>
+</div>

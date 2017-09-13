@@ -43,6 +43,6 @@ app.controller("NavBarCtrl",function($scope){
 });
 
 app.controller("RefreshCtrl",function ($location) {
-    $location.path("/");
+    // $location.path("/");
 })
 
