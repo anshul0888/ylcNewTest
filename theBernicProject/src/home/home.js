@@ -499,8 +499,10 @@ homeApp.controller("CategoryCtrl",function ($scope) {
 homeApp.controller("CategorySearchCtrl",function($scope){
     $scope.dropboxitemselected=function(categoryItems){
         $scope.categoryFilter= categoryItems;
+        $scope.categoryFilterDisplay = "Results for Category: ";
     }
     $scope.removeFilter=function(){
         $scope.categoryFilter="";
+        $scope.categoryFilterDisplay="";
     }
 });
