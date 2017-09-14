@@ -1,12 +1,12 @@
 <div ng-controller="FilterSearchCtrl">
     <!--Hotel Headline and Description-->
-    <div ng-controller="HotelDescCtrl" class="container-fluid" style="width: 1140px;">
+    <div ng-controller="HotelDescCtrl" class="container-fluid">
         <h3>{{hotelDescHeadline}}</h3>
-        <p class="text-justify" style="font-size: 16px;">{{hotelDescData}}</p>
+        <p class="text-justify " style="font-size: 16px;">{{hotelDescData}}</p>
     </div>
     <br>
     <!--Filter-->
-    <div class="row" ng-controller="FilterCtrl">
+    <div class="row container-fluid" ng-controller="FilterCtrl">
         <div class="form-inline form-group">
             <label class="col-sm-1 col-sm-offset-2 control-label" style="text-align: right;">Filter by</label>
             <div class="col-sm-2" >
