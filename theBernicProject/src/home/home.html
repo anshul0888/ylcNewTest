@@ -1,8 +1,14 @@
-<div ng-controller="CategorySearchCtrl">
-    <!--Category Filter-->
-    <div class="row" ng-controller="CategoryCtrl">
+<div ng-controller="FilterSearchCtrl">
+    <!--Hotel Headline and Description-->
+    <div ng-controller="HotelDescCtrl" class="container-fluid" style="width: 1140px;">
+        <h3>{{hotelDescHeadline}}</h3>
+        <p class="text-justify" style="font-size: 16px;">{{hotelDescData}}</p>
+    </div>
+    <br>
+    <!--Filter-->
+    <div class="row" ng-controller="FilterCtrl">
         <div class="form-inline form-group">
-            <label class="col-sm-1 col-sm-offset-3 control-label" style="text-align: right;">Filter by</label>
+            <label class="col-sm-1 col-sm-offset-2 control-label" style="text-align: right;">Filter by</label>
             <div class="col-sm-2" >
                 <!--DropDown for Category-->
                 <div uib-dropdown is-open="categoryStatus.isopen">
@@ -12,23 +18,44 @@
                     </button>
                     <br>
                     <ul class="dropdown-menu"  uib-dropdown-menu role="menu" aria-labelledby="categoryFilterButton">
-                        <li role="menuitem" ng-repeat="categoryItems in categoryMenu"><a ng-click="dropboxitemselected(categoryItems)">{{categoryItems}}</a></li>
+                        <li role="menuitem" ng-repeat="categoryItems in categoryMenu"><a ng-click="categoryItemSelected(categoryItems)">{{categoryItems}}</a></li>
                     </ul>
                 </div>
+                <!--Dropdown for Category Ends-->
             </div>
+
+            <div class="col-sm-2" >
+                <!--DropDown for Borough-->
+                <div uib-dropdown is-open="categoryStatus.isopen">
+                    <button class="btn btn-primary btn-block dropdown-toggle" ng-model="categoryFi" type="button" id="boroughFilterButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Borough
+                        <span class="caret"></span>
+                    </button>
+                    <br>
+                    <ul class="dropdown-menu"  uib-dropdown-menu role="menu" aria-labelledby="boroughFilterButton">
+                        <li role="menuitem" ng-repeat="boroughItems in boroughMenu"><a ng-click="boroughItemSelected(boroughItems)">{{boroughItems}}</a></li>
+                    </ul>
+                </div>
+                <!--Dropdown for Borough Ends-->
+            </div>
+            <!--Clear filter button-->
             <div class="col-sm-2">
                 <button type="button" class="btn btn-danger btn-block" ng-click="removeFilter();"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;Clear Filter</button>
             </div>
+            <!--clear filter button ends-->
         </div>
     </div>
-    <!--Category Ends-->
+    <!--Filter Ends-->
     <!--<br>-->
-    <div class="text-center"><h4>{{categoryFilterDisplay}}<i><span style="font-size: 22px;">{{categoryFilter}}</span></i></h4></div>
-    <!--<br>-->
-    <div ng-controller="ExperienceCardCtrl" class="container">
+
+    <!--Filter Search Message Display-->
+    <div class="text-center"><h4>{{categoryFilterDisplay}}<i><span style="font-size: 22px;">{{categoryFilter}}</span></i>{{boroughFilterDisplay}}<i><span style="font-size: 22px;">{{boroughFilter}}</span></i></h4></div>
+    <!--Filter Search Message Display Ends-->
+
+    <div ng-controller="ExperienceCardCtrl" class="container" style="padding-left: 0px;">
         <!-- Experience Card -->
         <!--<div class="row" ng-repeat="cardData in experienceCardData" ng-if="$index % 3 == 0">-->
-            <div class="col-sm-4" ng-repeat="cardData in experienceCardData | filter:{category: categoryFilter}">
+            <div class="col-sm-4" ng-repeat="cardData in experienceCardData | filter:{category: categoryFilter} | filter:{borough: boroughFilter}">
                 <!--Include ".slice($index, ($index+3 > experienceCardData.length ? experienceCardData.length : $index+3))" after "experienceCardData in ng-repeat" just in case-->
                 <a ng-click="cardClick(cardData)">
                     <div class="thumbnail experienceCard" >

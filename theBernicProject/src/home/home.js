@@ -37,6 +37,10 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Shopping",
                 "Traditional"
             ],
+            borough:[
+                "Manhattan",
+                "Brooklyn"
+            ],
             goodFor: [
                 "Families",
                 "Senior citizens",
@@ -77,6 +81,9 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             category: [
                 "Family friendly",
                 "Traditional"
+            ],
+            borough:[
+                "Queens"
             ],
             goodFor: [
                 "Families",
@@ -120,6 +127,12 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Cooking",
                 "Food"
             ],
+            borough:[
+                "Manhattan",
+                "Brooklyn",
+                "Bronx",
+                "Queens"
+            ],
             goodFor: [
                 "Families",
                 "Senior citizens",
@@ -159,6 +172,12 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             cancellationPolicy: "If cancelled 3 days before the class, then 25% charged, 2 days before the class then 30% charged and if canceled on date of class then 100% charged and no refund is given.",
             category: [
                 "Traditional"
+            ],
+            borough:[
+                "Manhattan",
+                "Brooklyn",
+                "Bronx",
+                "Queens"
             ],
             goodFor: [
                 "Families",
@@ -203,6 +222,12 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Shopping",
                 "Traditional"
             ],
+            borough:[
+                "Manhattan",
+                "Brooklyn",
+                "Bronx",
+                "Queens"
+            ],
             goodFor: [
                 "Families",
                 "Senior citizens",
@@ -243,6 +268,12 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             category: [
                 "Shopping",
                 "Traditional"
+            ],
+            borough:[
+                "Manhattan",
+                "Brooklyn",
+                "Bronx",
+                "Queens"
             ],
             goodFor: [
                 "Families",
@@ -289,6 +320,12 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Traditional",
                 "Anshul"
             ],
+            borough:[
+                "Manhattan",
+                "Brooklyn",
+                "Bronx",
+                "Queens"
+            ],
             goodFor: [
                 "Families",
                 "Senior citizens",
@@ -331,6 +368,12 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Food",
                 "Shopping",
                 "Traditional"
+            ],
+            borough:[
+                "Manhattan",
+                "Brooklyn",
+                "Bronx",
+                "Queens"
             ],
             goodFor: [
                 "Families",
@@ -377,6 +420,12 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Traditional",
                 "Testing"
             ],
+            borough:[
+                "Manhattan",
+                "Brooklyn",
+                "Bronx",
+                "Queens"
+            ],
             goodFor: [
                 "Families",
                 "Senior citizens",
@@ -419,7 +468,14 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
                 "Cooking",
                 "Food",
                 "Shopping",
-                "Traditional"
+                "Traditional",
+                "Category Test"
+            ],
+            borough:[
+                "Manhattan",
+                "Brooklyn",
+                "Bronx",
+                "Queens"
             ],
             goodFor: [
                 "Families",
@@ -459,7 +515,15 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             groupSize: "Maximum up to 4 people, 50$ for a single class, 75$ for 2 people and 96$ for 3 people.",
             cancellationPolicy: "If cancelled 3 days before the class, then 25% charged, 2 days before the class then 30% charged and if canceled on date of class then 100% charged and no refund is given.",
             category: [
-                "Testing"
+                "Testing",
+                "Category Test"
+            ],
+            borough:[
+                "Manhattan",
+                "Brooklyn",
+                "Bronx",
+                "Queens",
+                "Borough Test"
             ],
             goodFor: [
                 "Families",
@@ -482,27 +546,49 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
 });
 
 //Filter category controller
-homeApp.controller("CategoryCtrl",function ($scope) {
+homeApp.controller("FilterCtrl",function ($scope) {
     $scope.categoryStatus = {
         isopen: false
     };
     //Category Menu
-    $scope.categoryMenu = ["Family friendly",
+    $scope.categoryMenu = [
+        "Family friendly",
         "Cooking",
         "Food",
         "Shopping",
         "Traditional",
         "Anshul",
-    "Testing"];
+        "Testing",
+        "Category Test"
+    ];
+    $scope.boroughMenu = [
+        "Manhattan",
+        "Brooklyn",
+        "Bronx",
+        "Queens",
+        "Borough Test"
+    ]
 
 });
-homeApp.controller("CategorySearchCtrl",function($scope){
-    $scope.dropboxitemselected=function(categoryItems){
+homeApp.controller("FilterSearchCtrl",function($scope){
+    $scope.categoryItemSelected = function(categoryItems){
         $scope.categoryFilter= categoryItems;
-        $scope.categoryFilterDisplay = "Results for Category: ";
+        $scope.categoryFilterDisplay = "Results: ";
+    }
+    $scope.boroughItemSelected = function(boroughItems){
+        $scope.boroughFilter= boroughItems;
+        $scope.categoryFilterDisplay = "Results: ";
+        $scope.boroughFilterDisplay = " ";
     }
     $scope.removeFilter=function(){
         $scope.categoryFilter="";
         $scope.categoryFilterDisplay="";
+        $scope.boroughFilterDisplay= "";
+        $scope.boroughFilter="";
     }
+});
+
+homeApp.controller("HotelDescCtrl", function($scope){
+    $scope.hotelDescHeadline = "Book unique tours and activities from NYC Locals";
+    $scope.hotelDescData = "The Bernic Hotel offers a number of unique experiences from actual locals through our partner, Your Local Cousin. Don't just walk through Times Square, take a tour with a Broadway actor and get a behind the scenes look at the costume closet of the Lion King. Celebrating a special occasion? Take a dessert tour of the West Village and get your sugar fix!";
 });

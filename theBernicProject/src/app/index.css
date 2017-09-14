@@ -44,14 +44,18 @@ body{
 .navbar{
     height:60px;
     z-index: 10;
+    background-color: rgba(241,90,36,1);
+    width:100%;
+    border:none;
+    border-radius: 0px;
 }
 .navbar-nav{
     font-size: large;
 }
-.leftUl li:hover{
-    background-color: rgba(153,164,173,0.5);
+.rightUl li:hover{
+    background-color: rgba(255,255,255,0.2);
 }
-.leftUl{
+.rightUl{
     margin-top: 0px;
     padding:4px;
 }
