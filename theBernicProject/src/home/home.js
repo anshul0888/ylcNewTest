@@ -6,7 +6,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
     $scope.experienceCardData = [
         {
             url: "https://www.filepicker.io/api/file/XjXg5l5VThaaELADqKAw",
-            experienceId:"Here should be id",
+            experienceId:"exp1",
             cityDescription: "Ancient Knife-making Workshop and Vietnamese Cooking Classes",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -54,7 +54,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/rHKIXoCFT7CHiiRZMHc3",
-            experienceId:"Here should be id",
+            experienceId:"exp2",
             cityDescription: "Vegetarian and vegan delicacies with an impassioned local foodie",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -98,7 +98,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/ypHLqUlVSYedDqN8Me9C",
-            experienceId:"Here should be id",
+            experienceId:"exp3",
             cityDescription: "City 3",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -145,8 +145,8 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             credentials:"Undergraduate degree in Environmental Science"
         },
         {
-            url: "./images/Brooklyn.png",
-            experienceId:"Here should be id",
+            url: "./assets/images/Brooklyn.png",
+            experienceId:"exp4",
             cityDescription: "City 4",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -191,8 +191,8 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             credentials:"Undergraduate degree in Environmental Science"
         },
         {
-            url: "./images/mexico.png",
-            experienceId:"Here should be id",
+            url: "./assets/images/mexico.png",
+            experienceId:"exp5",
             cityDescription: "City 5",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -241,7 +241,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/XjXg5l5VThaaELADqKAw",
-            experienceId:"Here should be id",
+            experienceId:"exp6",
             cityDescription: "City 6",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -288,7 +288,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/rHKIXoCFT7CHiiRZMHc3",
-            experienceId:"Here should be id",
+            experienceId:"exp7",
             cityDescription: "City 7",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -338,7 +338,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             credentials:"Undergraduate degree in Environmental Science"
         },{
             url: "https://www.filepicker.io/api/file/ypHLqUlVSYedDqN8Me9C",
-            experienceId:"Here should be id",
+            experienceId:"exp8",
             cityDescription: "City 8",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -387,8 +387,8 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             credentials:"Undergraduate degree in Environmental Science"
         },
         {
-            url: "./images/Brooklyn.png",
-            experienceId:"Here should be id",
+            url: "./assets/images/Brooklyn.png",
+            experienceId:"exp9",
             cityDescription: "City 9",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -438,8 +438,8 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
             credentials:"Undergraduate degree in Environmental Science"
         },
         {
-            url: "./images/mexico.png",
-            experienceId:"Here should be id",
+            url: "./assets/images/mexico.png",
+            experienceId:"exp10",
             cityDescription: "City 10",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -490,7 +490,7 @@ homeApp.controller("ExperienceCardCtrl",function($scope, $rootScope, $location){
         },
         {
             url: "https://www.filepicker.io/api/file/XjXg5l5VThaaELADqKAw",
-            experienceId:"Here should be id",
+            experienceId:"exp11",
             cityDescription: "City 11",
             cityName: "Hanoi center",
             countryName: "Vietnam",
@@ -567,28 +567,32 @@ homeApp.controller("FilterCtrl",function ($scope) {
         "Bronx",
         "Queens",
         "Borough Test"
-    ]
+    ];
 
 });
 homeApp.controller("FilterSearchCtrl",function($scope){
     $scope.categoryItemSelected = function(categoryItems){
         $scope.categoryFilter= categoryItems;
         $scope.categoryFilterDisplay = "Results: ";
-    }
+        $scope.filterClicked = true;
+    };
     $scope.boroughItemSelected = function(boroughItems){
         $scope.boroughFilter= boroughItems;
         $scope.categoryFilterDisplay = "Results: ";
         $scope.boroughFilterDisplay = " ";
-    }
+        $scope.filterClicked = true;
+    };
     $scope.removeFilter=function(){
         $scope.categoryFilter="";
         $scope.categoryFilterDisplay="";
         $scope.boroughFilterDisplay= "";
         $scope.boroughFilter="";
-    }
+        $scope.filterClicked = false;
+    };
+
 });
 
 homeApp.controller("HotelDescCtrl", function($scope){
     $scope.hotelDescHeadline = "Book unique tours and activities from NYC Locals";
-    $scope.hotelDescData = "The Bernic Hotel offers a number of unique experiences from actual locals through our partner, Your Local Cousin. Don't just walk through Times Square, take a tour with a Broadway actor and get a behind the scenes look at the costume closet of the Lion King. Celebrating a special occasion? Take a dessert tour of the West Village and get your sugar fix!";
+    $scope.hotelDescData = "The Bernic Hotel offers a number of unique experiences from actual locals through our partner, Your Local Cousin. Don't just walk through Times Square, take a tour with a Broadway actor and get a behind the scenes look at the costume closet of the Lion King. Celebrating a special occasion? Take a dessert tour of the West Village and get your sugar fix! You can even take a street art tour of Williamsburg or explore DUMBO with some of the best views of the city. If you don't see an experience you want, just ask! We can also make recommendations.";
 });

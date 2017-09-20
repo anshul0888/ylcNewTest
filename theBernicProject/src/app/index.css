@@ -1,7 +1,7 @@
 body{
     overflow-y: auto;
     background-color: rgba(243,244,246,1);
-    font-family: "Roboto", sans-serif;
+    font-family: "Helvetica Neue Light", sans-serif;
 }
 @import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 
@@ -18,7 +18,7 @@ body{
     background-color: rgba(1,38,56,1);
     color: rgba(255,255,255,1);
     font-size: 40px;
-    font-family: "HelveticaNeue",sans-serif;
+    font-family: "Helvetica Neue Light",sans-serif;
     z-index: 10;
     padding:2px 0px;
 }
@@ -31,23 +31,28 @@ body{
 
 /* Navigation Bar */
 .navbar-collapse.in {
-    overflow-y: hidden;
+    overflow-y: auto;
     background-color: rgba(255,255,255,1);
   }
 .navPosition{
     margin-top: 60px;
 }
 .ylcLogo{
-    height:57px;
-    width:57px;
+    height:60px;
+    width:60px;
 }
 .navbar{
     height:60px;
     z-index: 10;
-    background-color: rgba(241,90,36,1);
     width:100%;
     border:none;
     border-radius: 0px;
+    /*background gradient*/
+    background: black; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(64,64,63,1), rgba(25,25,25,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(64,64,63,1), rgba(25,25,25,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(64,64,63,1), rgba(25,25,25,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(64,64,63,1), rgba(25,25,25,1) ); /* Standard syntax (must be last) */
 }
 .navbar-nav{
     font-size: large;
@@ -82,6 +87,14 @@ label{
     font-size: 16px !important;
 }
 
+.ylcBarGradient{
+    /*background gradient*/
+    background: black; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(64,64,63,1), rgba(25,25,25,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(64,64,63,1), rgba(25,25,25,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(64,64,63,1), rgba(25,25,25,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(64,64,63,1), rgba(25,25,25,1) ); /* Standard syntax (must be last) */
+}
 
 .stripe-3 {
     height: 5px;
@@ -90,3 +103,4 @@ label{
     margin-top: -10px;
     margin-bottom: 30px;
 }
+

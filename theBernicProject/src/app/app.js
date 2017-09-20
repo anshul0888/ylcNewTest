@@ -4,10 +4,10 @@ var app = angular.module('YlcApp',['ui.bootstrap','ngRoute','HomeApp','Experienc
 app.config(function($routeProvider){
     //Home Route
     $routeProvider.when('/home',{
-        templateUrl:"./home/home.html"
+        templateUrl:"./home/home.tpl.html"
     });
     $routeProvider.when('/experienceDetails',{
-        templateUrl:"./experienceDetails/experienceDetails.html"
+        templateUrl:"./experienceDetails/experienceDetails.tpl.html"
     });
     $routeProvider.otherwise({
         redirectTo: '/home'
@@ -17,7 +17,7 @@ app.config(function($routeProvider){
 // Logo Controller
 app.controller("LogoCtrl",function($scope,$rootScope, $q, $http){
     //Logo Variable
-    $scope.logo = "./images/bernicLogo.png";
+    $scope.logo = "./assets/images/bernicLogo.png";
     // Page Title Variable
     $rootScope.title = "Your Local Cousin";
 
@@ -39,10 +39,10 @@ app.controller("LogoCtrl",function($scope,$rootScope, $q, $http){
 // Navigation Bar Controller
 app.controller("NavBarCtrl",function($scope){
     $scope.isNavCollapsed = true;
-    $scope.ylcLogo = './images/ylcLogo.png';
+    $scope.ylcLogo = './assets/images/ylcLogo.png';
 });
 
 app.controller("RefreshCtrl",function ($location) {
-    // $location.path("/");
-})
+    $location.path("/");
+});
 
