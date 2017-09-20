@@ -66,16 +66,16 @@ body{
 }
 
 /*Footer*/
-.foot{
-    margin-top: 20px;
-    background-color: rgba(1,38,56,1);
-    color: rgba(255,255,255,1);
-    position: relative;
-    bottom:0;
-    left:0;
-    width:100%;
-    min-height:200px;
-}
+/*.foot{*/
+    /*margin-top: 20px;*/
+    /*background-color: rgba(1,38,56,1);*/
+    /*color: rgba(255,255,255,1);*/
+    /*position: relative;*/
+    /*bottom:0;*/
+    /*left:0;*/
+    /*width:100%;*/
+    /*min-height:200px;*/
+/*}*/
 section{
     overflow-y: auto;
 }
@@ -104,3 +104,42 @@ label{
     margin-bottom: 30px;
 }
 
+/*========================
+css for footer
+=========================*/
+
+footer {
+    background: #001c28;
+    padding: 40px 0 0 0;
+}
+.footer {
+    background: #001c28;
+    padding: 5px 0 0px;
+    position: relative;
+    z-index: 0;
+    padding-bottom: 150px;
+}
+.cousin-btn a {
+    border: 2px solid #808080;
+    color: #808080;
+    padding: 5px 10px;
+}
+.footer-menu ul li a {
+    color: #808080;
+}
+.cousin-btn a:hover {
+    color: #fff;
+    background-color: #3C3C3C;
+}
+.space20 {
+    margin-top: 20px !important;
+}
+.whiteclr {
+    color: #fff;
+}
+.footer-menu-new {
+    margin-top: 45px;
+}
+.footer-menu-new ul li a {
+    color: #fff;
+}
