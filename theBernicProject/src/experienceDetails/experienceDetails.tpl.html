@@ -1,4 +1,4 @@
-<div class="container" ng-controller="ExperienceDataCtrl">
+<div class="container" style="font-size: 16px;" ng-controller="ExperienceDataCtrl">
 
         <div class="row" ng-controller="CarouselDemoCtrl">
             <div style="height: 500px; max-width: 1170px;">
@@ -13,28 +13,27 @@
 
         </div>
 
-
-
-
-
-
-
-
+    <!--<div class="row" ng-repeat="ph in expData.experience_photos">-->
+       <!--what is  {{ph}}-->
+    <!--</div>-->
+    <div class="row container-fluid" style="padding-left: 15px; max-width: 1185px; background-color: rgba(73,68,64,1);">
+        <h4 style="color: rgba(255,255,255,1);font-weight: 100;">{{expData.experience_title}}</h4>
+    </div>
     <div class="row" style="padding-left: 15px; max-width: 1185px;">
         <!--Left Form-->
         <div class="col-sm-8">
             <div class="container-fluid">
                 <!--City Name-->
                 <div class="row container-fluid">
-                    <h2><span style="font-weight: 100;">{{expData.cityName}},</span> <strong>{{expData.countryName}}</strong></h2>
+                    <h2><span style="font-weight: 100;">{{expData.experience_location}}</span></h2>
                     <!--City Description-->
-                    <p>{{expData.cityDescription}}</p>
+                    <p>{{expData.experience_short_description}}</p>
                 </div>
                 <!--City tour details-->
                 <div class="row">
-                    <div class="col-sm-3"><i class="fa fa-hourglass" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.timeInterval}}</span></div>
-                    <div class="col-sm-4"><i class="fa fa-weixin" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.language}}</span></div>
-                    <div class="col-sm-5"><i class="fa fa-clock-o" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.tourDetails.timeDetails}}</span></div>
+                    <div class="col-sm-3"><i class="fa fa-hourglass" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.experience_length.length_value}} {{expData.experience_length.length_type}}</span></div>
+                    <div class="col-sm-4"><i class="fa fa-weixin" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails" ng-repeat="lang in expData.experience_languages">{{lang}}</span></div>
+                    <div class="col-sm-5"><i class="fa fa-clock-o" style="color: teal; font-size: 20px;" aria-hidden="true"></i>&nbsp; <span class="tourDetails">{{expData.experience_start_time}}</span></div>
                 </div>
                 <div class="row container-fluid">
                     <hr>
@@ -47,7 +46,7 @@
                     </div>
                     <div class="col-sm-9">
                         <p class="text-justify">
-                            {{expData.aboutExperience}}
+                            {{expData.experience_long_description.description_by_hour}}
                         </p>
                     </div>
                 </div>
@@ -61,7 +60,7 @@
                     </div>
                     <div class="col-sm-9">
                         <ul style="padding: 15px">
-                            <li ng-repeat="includedItems in expData.whatIncluded">{{includedItems}}</li>
+                            <li ng-repeat="includedItems in expData.experience_included">{{includedItems}}</li>
                         </ul>
                     </div>
                 </div>
@@ -76,7 +75,7 @@
                     </div>
                     <div class="col-sm-9">
                         <ul style="padding: 15px">
-                            <li ng-repeat="excludedItems in expData.whatExcluded">{{excludedItems}}</li>
+                            <li ng-repeat="excludedItems in expData.experience_excluded">{{excludedItems}}</li>
                         </ul>
                     </div>
                 </div>
@@ -90,7 +89,7 @@
                         <h5>Transportation</h5>
                     </div>
                     <div class="col-sm-9">
-                        <p>{{expData.transportation}}</p>
+                        <p>{{expData.experience_transportation}}</p>
                     </div>
                 </div>
                 <div class="row container-fluid">
@@ -103,7 +102,7 @@
                         <h5>Group Size</h5>
                     </div>
                     <div class="col-sm-9">
-                        <p>{{expData.groupSize}}</p>
+                        <p>{{expData.experience_group_size}}</p>
                     </div>
                 </div>
                 <div class="row container-fluid">
@@ -116,7 +115,7 @@
                         <h5>Cancellation Policy</h5>
                     </div>
                     <div class="col-sm-9">
-                        <p>{{expData.cancellationPolicy}}</p>
+                        <p>{{expData.experience_cancelation_policy}}</p>
                     </div>
                 </div>
                 <div class="row container-fluid">
@@ -129,7 +128,7 @@
                         <h5>Category</h5>
                     </div>
                     <div class="col-sm-9">
-                        <div class="backTileDiv" ng-repeat="categoryItems in expData.category">{{categoryItems}}</div>
+                        <div class="backTileDiv" ng-repeat="categoryItems in expData.experience_categories">{{categoryItems}}</div>
                     </div>
                 </div>
                 <div class="row container-fluid">
@@ -142,7 +141,7 @@
                         <h5>Good for</h5>
                     </div>
                     <div class="col-sm-9">
-                        <div class="backTileDiv" ng-repeat="goodItems in expData.goodFor">{{goodItems}}</div>
+                        <div class="backTileDiv" ng-repeat="goodItems in expData.experience_for">{{goodItems}}</div>
                     </div>
                 </div>
                 <div class="row container-fluid">
@@ -162,7 +161,7 @@
                 <div class="row">
                     <div class="col-sm-5">
                         <span style="border-bottom: 1px solid rgba(0,0,0,1);font-size: 14px;">Starts At</span><br>
-                        <strong style="font-size: 18px;">US $50</strong><br>
+                        <strong style="font-size: 18px;">US ${{expData.experience_pricing.price_1_person}}</strong><br>
                         <span style="font-size: 14px;">per person</span>
                     </div>
                     <div class="col-sm-7">
@@ -182,11 +181,11 @@
                             <div class="stripe-3"></div>
                         </div>
                         <div class="col-sm-4">
-                            <img class="img-circle hostImage" src={{expData.hostImg}}>
+                            <img class="img-circle hostImage" src={{expData.experience_host_information.profile_picture}}>
                         </div>
                     </div>
                     <div class="row container-fluid">
-                        <p>{{expData.aboutHost}}</p>
+                        <p>{{expData.experience_host_information.about}}</p>
                     </div>
                 </div>
                 <div class="row container-fluid">
@@ -201,7 +200,7 @@
                         <div class="stripe-3"></div>
                     </div>
                     <div class="row container-fluid">
-                        <p>{{expData.credentials}}</p>
+                        <p>{{expData.experience_other_qualification}}</p>
                     </div>
                 </div>
                 <div class="row container-fluid">

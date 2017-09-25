@@ -6,7 +6,7 @@ expApp.controller("ExperienceDataCtrl",function($scope, $rootScope){
 
 
 //Experience Carousel Controller
-expApp.controller('CarouselDemoCtrl', function ($scope) {
+expApp.controller('CarouselDemoCtrl', function ($scope, $rootScope) {
     $scope.myInterval = 3000;
     $scope.noWrapSlides = false;
     $scope.active = 0;
@@ -16,12 +16,11 @@ expApp.controller('CarouselDemoCtrl', function ($scope) {
     $scope.addSlide = function() {
         var newWidth = 450 + slides.length + 1;
         slides.push({
-            image: ["./assets/images/car1.png","./assets/images/car2.png","https://www.filepicker.io/api/file/ypHLqUlVSYedDqN8Me9C","https://www.filepicker.io/api/file/XjXg5l5VThaaELADqKAw"],
+            image: $rootScope.clickCardData.experience_photos,
             id: currIndex++
         });
     };
-
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < $rootScope.clickCardData.experience_photos.length; i++) {
         $scope.addSlide();
     }
 });

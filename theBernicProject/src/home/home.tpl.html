@@ -66,10 +66,7 @@
                 <!--Include ".slice($index, ($index+3 > experienceCardData.length ? experienceCardData.length : $index+3))" after "experienceCardData in ng-repeat" just in case-->
                 <a ng-click="cardClick(cardData)">
                     <div class="thumbnail experienceCard" >
-                        <img class="experienceCardImg img-responsive" src={{cardData.url}} alt="image.jpg">
-                        <div class="experienceCardText">
-                            <h4 class="experienceCardTextParagraph">{{cardData.cityDescription}}</h4>
-                        </div>
+                        <img class="experienceCardImg img-responsive" src={{cardData.thumbail_image_link}} alt="image.jpg">
                     </div>
                 </a>
             </div>
